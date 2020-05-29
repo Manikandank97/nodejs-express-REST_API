@@ -12,10 +12,6 @@ const { insertTodo, getTodos, deleteTodo, updateTodo, } = require('./database/to
 // defining Express app
 const app = express();
 
-// const ads = [
-//     { title: "Hello world express!!!" }
-// ]
-
 // adding helmet to enhance security
 app.use(helmet());
 
@@ -32,11 +28,6 @@ app.use(morgan('combined'));
 app.get('/todolist', async (req, res) => {
     res.send(await getTodos())
 })
-
-// starting the server
-// app.listen(3005, () => {
-//     console.log("listening on port 3005")
-// })
 
 // ... app definition, middleware configuration, and 
 
